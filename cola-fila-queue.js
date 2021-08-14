@@ -13,16 +13,17 @@
 // caracterizada por ser una secuencia de elementos en la que la operacion de insercion (enqueue)
 // se realiza por un extremo y la operacion de extraccion (dequeue) por el otro.
 
-//[] Constructor
-//[] Encolar-Insertar-enqueue
-//[] Desencolar-Atender-Siguiente en fila-dequeue
-//[] Tamaño fila - get_size
-//[] Esta vacia - is_empty
-//[] Mirar siguiente elemento sin desencolarlo- ver siguiente - peek
-//[] imprimir toda la fila - print
+//1.[] Constructor
+//2.[] Encolar-Insertar-enqueue
+//3.[] Desencolar-Atender-Siguiente en fila-dequeue
+//4.[] Tamaño fila - get_size
+//5.[] Esta vacia - is_empty
+//6.[] Mirar siguiente elemento sin desencolarlo- ver siguiente - peek
+//7.[] imprimir toda la fila - print
 
 // se crea la clase
 class ColaFila{
+  // 1. Constructor
   // se crea el constructor con los atributos basicos que necesita la clase
   constructor(){
     this.elementos = {};
@@ -32,7 +33,7 @@ class ColaFila{
 
   // METODOS
 
-  // 1. Encolar-Insertar-enqueue
+  // 2. Encolar-Insertar-enqueue
   encolar(info){
     // se toma la posicion final en la que vamos y 
     // nos ubicamos en la fila en esa posicion para 
@@ -41,7 +42,7 @@ class ColaFila{
     // aumentamos la posicion final un turno
     this.final++;
   }
-  // 2. Desencolar-Atender-Siguiente en fila-dequeue
+  // 3. Desencolar-Atender-Siguiente en fila-dequeue
   desencolar(){
     // se revisa primero si la cola esta vacia 
     // es decir no hay nada o nadie en la cola
@@ -58,13 +59,13 @@ class ColaFila{
     // se devuelve info
     return info;
   }
-  // 3. Tamaño fila - get_size
+  // 4. Tamaño fila - get_size
   tamano_fila(){
     // simplemente se resta la posicion final con la inicial y 
     // ese es el tamaño actual de la cola
     return this.final - this.primero;
   }
-  // 4. Esta vacia - is_empty
+  // 5. Esta vacia - is_empty
   esta_vacia(){
     // se revisa si tamaño actual de la fila es 0
     if(this.tamano_fila() === 0){
@@ -73,7 +74,7 @@ class ColaFila{
       return false;
     }
   }
-  // 5. Mirar siguiente elemento sin desencolarlo- ver siguiente - peek
+  // 6. Mirar siguiente elemento sin desencolarlo- ver siguiente - peek
   ver_siguiente(){
     // se revisa si tamaño actual de la fila es 0
     if(this.tamano_fila() === 0){
@@ -83,7 +84,7 @@ class ColaFila{
     // si no es 0 se devuelve el elemento que va primero en la fila
     return this.elementos[this.primero];
   }
-  // 6. imprimir toda la fila - print
+  // 7. imprimir toda la fila - print
   imprimir(){
     // se revisa si tamaño actual de la fila es 0
     if(this.tamano_fila() === 0){
